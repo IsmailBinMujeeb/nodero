@@ -3,7 +3,7 @@
   "description": "Nodero, One single cli to manage your projects",
   "module": "index.ts",
   "type": "module",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "bin": {
     "nodero": "./src/index.ts",
