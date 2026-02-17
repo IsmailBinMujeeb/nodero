@@ -1,14 +1,16 @@
 import { Command } from 'commander';
 import { findPackageJson } from '../utils/findPackageJson';
 import chalk from 'chalk';
+import { conf } from '../config/conf';
 
 export const listCommand = new Command('ls').description('List all projects').action(async () => {
   console.log('Listing packages...');
 
   try {
-    const results = await findPackageJson('/home');
+    const results = await findPackageJson(conf.projectsDir || '/home');
 
     console.log(`Found ${results.length} packages:`);
+
     results
       .sort((a, b) => a.data?.name?.localeCompare(b.data?.name))
       .forEach((result) => {
