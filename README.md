@@ -1,7 +1,7 @@
 # Nodero - One single cli to manage your projects
 
 <p align="center">
-    <img src="./assets/nodero.png" alt="Nodero Logo" width="200"/>
+    <img src="https://raw.githubusercontent.com/IsmailBinMujeeb/nodero/refs/heads/main/assets/nodero.png" alt="Nodero Logo" width="200"/>
 </p>
 
 Opening projects from the file explorer by right clicking on the project folder? I hate it, There are zillions of cases when you will work on more than one project in a week and opening projects from terminal or file explorer when open machine does not look like a good idea. Different IDEs have different ways of opening projects, and sometimes you just want to open a project quickly without having to remember the exact command.
