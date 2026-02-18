@@ -1,8 +1,8 @@
-# Nodero - One single cli to manage your projects
-
 <p align="center">
     <img src="https://raw.githubusercontent.com/IsmailBinMujeeb/nodero/refs/heads/main/assets/nodero.png" alt="Nodero Logo" width="200"/>
 </p>
+
+<h1 align="center">Nodero</h1>
 
 Jumping between projects shouldn't be a chore. Whether you're switching between three repos in a day or picking up something you haven't touched in weeks, hunting through the file explorer or remembering IDE-specific commands just slows you down.
 
