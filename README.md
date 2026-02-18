@@ -34,6 +34,7 @@ ndr [options] [command]
 ## Commands
 
 ### `ls [searchTerm]`
+
 List all projects. Optionally pass a search term to filter results.
 
 ```bash
@@ -48,6 +49,7 @@ ndr ls my-app
 ---
 
 ### `open [options] <projectName>`
+
 Open a project file or directory. you can pass in which IDE to use for e.g. `open my-app -i zed` or `open my-app -ide vscode`.
 
 ```bash
@@ -58,6 +60,7 @@ ndr open my-app
 ---
 
 ### `config`
+
 Configure nodero settings interactively. Like `Project directory` and `IDE`, Defaults to `os.homedir()` and `vscode` respectively.
 
 ```bash
@@ -68,6 +71,7 @@ ndr config
 ---
 
 ### `info`
+
 Display information about the current nodero configuration. `Project directory` and `IDE`.
 
 ```bash
@@ -78,6 +82,7 @@ ndr info
 ---
 
 ### `dev <projectName>`
+
 Run the `dev` command defined in the project.
 
 ```bash
@@ -88,6 +93,7 @@ ndr dev my-app
 ---
 
 ### `start <projectName>`
+
 Run the `start` command defined in the project.
 
 ```bash
@@ -98,6 +104,7 @@ ndr start my-app
 ---
 
 ### `test <projectName>`
+
 Run the `test` command defined in the project.
 
 ```bash
@@ -108,6 +115,7 @@ ndr test my-app
 ---
 
 ### `help [command]`
+
 Display help for a specific command.
 
 ```bash
@@ -122,3 +130,5 @@ ndr help open
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Icon Credits: <a href="https://www.flaticon.com/free-icons/compass" title="compass icons">Compass icons created by Fajrul Fitrianto - Flaticon</a>
