@@ -4,7 +4,7 @@
     <img src="https://raw.githubusercontent.com/IsmailBinMujeeb/nodero/refs/heads/main/assets/nodero.png" alt="Nodero Logo" width="200"/>
 </p>
 
-Opening projects from the file explorer by right clicking on the project folder? I hate it, There are zillions of cases when you will work on more than one project in a week and opening projects from terminal or file explorer when open machine does not look like a good idea. Different IDEs have different ways of opening projects, and sometimes you just want to open a project quickly without having to remember the exact command.
+Jumping between projects shouldn't be a chore. Whether you're switching between three repos in a day or picking up something you haven't touched in weeks, hunting through the file explorer or remembering IDE-specific commands just slows you down.
 
 > Nodero is a simple CLI tool that allows you to manage your projects easily.
 
@@ -14,110 +14,110 @@ Opening projects from the file explorer by right clicking on the project folder?
 npm install -g nodero
 ```
 
-## Usage
+# Usage
 
-### Open Command - Open Project in your favorite IDE
+Nodero can be invoked using either the full command `nodero` or the shorthand alias `ndr`.
 
-```
-nodero open <project_name>
-```
-
-OR
-
-```
-ndr open <project_name>
+```bash
+nodero [options] [command]
+# or
+ndr [options] [command]
 ```
 
-Here the you can also use `ndr` instead of `nodero` to open a project, `<project_name>` is the name of the project you specified in the `projects.json` file of that project.
+## Options
 
-### ls Command - List Projects
+| Option          | Description               |
+| --------------- | ------------------------- |
+| `-V, --version` | Output the version number |
+| `-h, --help`    | Display help for command  |
 
-```
+## Commands
+
+### `ls [searchTerm]`
+List all projects. Optionally pass a search term to filter results.
+
+```bash
 nodero ls
+ndr ls
+
+# Filter projects by name
+nodero ls my-app
+ndr ls my-app
 ```
 
-OR
+---
 
-```
-ndr ls [search-term]
-```
+### `open [options] <projectName>`
+Open a project file or directory. you can pass in which IDE to use for e.g. `open my-app -i zed` or `open my-app -ide vscode`.
 
-This command will travel through all the `package.json` and give list of project name and its directory path. `[search-term]` is optionaly used to filter the projects by name.
-
-### dev Command - Run dev script from package.json
-
-```
-nodero dev <project_name>
+```bash
+nodero open my-app
+ndr open my-app
 ```
 
-OR
+---
 
-```
-ndr dev <project_name>
-```
+### `config`
+Configure nodero settings interactively. Like `Project directory` and `IDE`, Defaults to `os.homedir()` and `vscode` respectively.
 
-This command will run dev script from the `package.json`.
-
-### start Command - Run start script from package.json
-
-```
-nodero start <project_name>
-```
-
-OR
-
-```
-ndr start <project_name>
-```
-
-This command will run start script from the `package.json`.
-
-### test Command - Run test script from package.json
-
-```
-nodero test <project_name>
-```
-
-OR
-
-```
-ndr test <project_name>
-```
-
-This command will run test script from the `package.json`.
-
-### Config Command - Confgiuring Cli
-
-```
+```bash
 nodero config
-```
-
-OR
-
-```
 ndr config
 ```
 
-This command will options to edit the configuration of the cli. `Project Directory Path` and `IDE`. Default value for `Project Directory Path` is `os.homedir()` and `IDE` is `vscode`.
+---
 
-| Config                 | Default Value |
-| ---------------------- | ------------- |
-| Project Directory Path | os.homedir()  |
-| IDE                    | vscode        |
+### `info`
+Display information about the current nodero configuration. `Project directory` and `IDE`.
 
-### Info Command - What configuration is used by the cli
-
-```
+```bash
 nodero info
-```
-
-OR
-
-```
 ndr info
 ```
 
-This command will give information about the configuration used by the cli. It will give information about the `Project Directory Path` and `IDE`.
+---
+
+### `dev <projectName>`
+Run the `dev` command defined in the project.
+
+```bash
+nodero dev my-app
+ndr dev my-app
+```
+
+---
+
+### `start <projectName>`
+Run the `start` command defined in the project.
+
+```bash
+nodero start my-app
+ndr start my-app
+```
+
+---
+
+### `test <projectName>`
+Run the `test` command defined in the project.
+
+```bash
+nodero test my-app
+ndr test my-app
+```
+
+---
+
+### `help [command]`
+Display help for a specific command.
+
+```bash
+nodero help
+ndr help
+
+# Help for a specific command
+nodero help open
+ndr help open
+```
 
 ## License
 
