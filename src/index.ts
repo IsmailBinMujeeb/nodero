@@ -7,6 +7,7 @@ import { openCommand } from './commands/open';
 import { configCommand } from './commands/config';
 import { infoCommand } from './commands/info';
 import { devCommand } from './commands/dev';
+import { startCommand } from './commands/start';
 
 const program = new Command();
 
@@ -17,5 +18,6 @@ program.addCommand(openCommand);
 program.addCommand(configCommand);
 program.addCommand(infoCommand);
 program.addCommand(devCommand);
+program.addCommand(startCommand);
 
 program.parse(process.argv);
