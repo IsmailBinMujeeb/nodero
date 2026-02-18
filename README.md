@@ -6,7 +6,7 @@
 
 Opening projects from the file explorer by right clicking on the project folder? I hate it, There are zillions of cases when you will work on more than one project in a week and opening projects from terminal or file explorer when open machine does not look like a good idea. Different IDEs have different ways of opening projects, and sometimes you just want to open a project quickly without having to remember the exact command.
 
-> Nodero is a simple CLI tool that allows you to manage your projects easily. It provides a simple interface to create, delete, and open projects. It also provides a simple interface to manage your projects. It also provides a simple interface to manage your projects.
+> Nodero is a simple CLI tool that allows you to manage your projects easily.
 
 ## Installation
 
@@ -39,7 +39,21 @@ nodero ls
 OR
 
 ```
-nodero ls
+ndr ls
+```
+
+This command will travel through all the `package.json` and give list of project name and its directory path.
+
+### dev Command - Run dev script from package.json
+
+```
+nodero dev <project_name>
+```
+
+OR
+
+```
+ndr dev <project_name>
 ```
 
 This command will travel through all the `package.json` and give list of project name and its directory path.

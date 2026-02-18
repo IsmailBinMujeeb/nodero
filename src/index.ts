@@ -6,6 +6,7 @@ import project from '../package.json';
 import { openCommand } from './commands/open';
 import { configCommand } from './commands/config';
 import { infoCommand } from './commands/info';
+import { devCommand } from './commands/dev';
 
 const program = new Command();
 
@@ -15,5 +16,6 @@ program.addCommand(listCommand);
 program.addCommand(openCommand);
 program.addCommand(configCommand);
 program.addCommand(infoCommand);
+program.addCommand(devCommand);
 
 program.parse(process.argv);
