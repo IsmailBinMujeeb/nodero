@@ -8,7 +8,10 @@ type PackageJsonResult = {
 
 type InputPath = string | string[];
 
-export async function findPackageJson(input: InputPath): Promise<PackageJsonResult[]> {
+export async function findPackageJson(
+  input: InputPath,
+  searchTerm?: string,
+): Promise<PackageJsonResult[]> {
   const roots = Array.isArray(input) ? input : [input];
 
   const results: PackageJsonResult[] = [];
@@ -23,10 +26,12 @@ export async function findPackageJson(input: InputPath): Promise<PackageJsonResu
       try {
         if (file.includes('node_modules') || file.includes('wailsapp/wails')) continue;
         const content = await Bun.file(file).json();
-        results.push({
-          path: path.resolve(file),
-          data: content,
-        });
+        if (content.name.includes(searchTerm || '')) {
+          results.push({
+            path: path.resolve(file),
+            data: content,
+          });
+        }
       } catch (err) {
         console.warn('Failed to parse:', file);
       }
