@@ -39,10 +39,10 @@ nodero ls
 OR
 
 ```
-ndr ls
+ndr ls [search-term]
 ```
 
-This command will travel through all the `package.json` and give list of project name and its directory path.
+This command will travel through all the `package.json` and give list of project name and its directory path. `[search-term]` is optionaly used to filter the projects by name.
 
 ### dev Command - Run dev script from package.json
 
@@ -56,7 +56,35 @@ OR
 ndr dev <project_name>
 ```
 
-This command will travel through all the `package.json` and give list of project name and its directory path.
+This command will run dev script from the `package.json`.
+
+### start Command - Run start script from package.json
+
+```
+nodero start <project_name>
+```
+
+OR
+
+```
+ndr start <project_name>
+```
+
+This command will run start script from the `package.json`.
+
+### test Command - Run test script from package.json
+
+```
+nodero test <project_name>
+```
+
+OR
+
+```
+ndr test <project_name>
+```
+
+This command will run test script from the `package.json`.
 
 ### Config Command - Confgiuring Cli
 
