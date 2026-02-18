@@ -8,6 +8,7 @@ import { configCommand } from './commands/config';
 import { infoCommand } from './commands/info';
 import { devCommand } from './commands/dev';
 import { startCommand } from './commands/start';
+import { testCommand } from './commands/test';
 
 const program = new Command();
 
@@ -19,5 +20,6 @@ program.addCommand(configCommand);
 program.addCommand(infoCommand);
 program.addCommand(devCommand);
 program.addCommand(startCommand);
+program.addCommand(testCommand);
 
 program.parse(process.argv);
