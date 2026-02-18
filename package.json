@@ -3,7 +3,7 @@
   "description": "Nodero, One single cli to manage your projects",
   "module": "index.ts",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "bin": {
     "nodero": "./src/index.ts",
@@ -33,5 +33,15 @@
     "version-packages": "changeset version",
     "release": "changeset publish",
     "nodero": "bun run ./src/index.ts"
-  }
+  },
+  "author": "@IsmailBinMujeeb (IsmailBinMujeeb@gmail.com)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IsmailBinMujeeb/nodero.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IsmailBinMujeeb/nodero/issues"
+  },
+  "homepage": "https://github.com/IsmailBinMujeeb/nodero#readme"
 }
